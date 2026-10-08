@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monitel.Mal.Context.CIM16.Xml.GOSTSO", "Monitel.Mal.Context.CIM16.Xml.GOSTSO.csproj", "{09A8E5B6-AB3C-407C-855E-854D0A6AB352}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ReleaseWithForm|Any CPU = ReleaseWithForm|Any CPU
+		ReleaseWithoutForm|Any CPU = ReleaseWithoutForm|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09A8E5B6-AB3C-407C-855E-854D0A6AB352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A8E5B6-AB3C-407C-855E-854D0A6AB352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A8E5B6-AB3C-407C-855E-854D0A6AB352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A8E5B6-AB3C-407C-855E-854D0A6AB352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A8E5B6-AB3C-407C-855E-854D0A6AB352}.ReleaseWithForm|Any CPU.ActiveCfg = ReleaseWithForm|Any CPU
+		{09A8E5B6-AB3C-407C-855E-854D0A6AB352}.ReleaseWithForm|Any CPU.Build.0 = ReleaseWithForm|Any CPU
+		{09A8E5B6-AB3C-407C-855E-854D0A6AB352}.ReleaseWithoutForm|Any CPU.ActiveCfg = ReleaseWithoutForm|Any CPU
+		{09A8E5B6-AB3C-407C-855E-854D0A6AB352}.ReleaseWithoutForm|Any CPU.Build.0 = ReleaseWithoutForm|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEFB90C4-5376-4703-BFB2-2A6A7066A5CC}
+	EndGlobalSection
+EndGlobal

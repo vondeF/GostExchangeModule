@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "Monitel.Mal.Context.CIM16.Xml.GOSTSO": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Program Files\\Monitel\\CK-11\\Client",
+      "remoteDebugEnabled": false,
+      "remoteDebugMachine": "ia-sm-sipr1"
+    },
+    "Профиль 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Monitel\\CK-11\\Client\\ModelNavigator.exe",
+      "workingDirectory": "C:\\Program Files\\Monitel\\CK-11\\Client",
+      "remoteDebugEnabled": true,
+      "remoteDebugMachine": "ia-sm-sipr1:4026",
+      "authenticationMode": "Windows"
+    }
+  }
+}

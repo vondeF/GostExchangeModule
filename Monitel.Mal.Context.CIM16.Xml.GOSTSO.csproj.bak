@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<Description>Экспорт/импорт данных в ГОСТ Р 58651 (СО ЕЭС)</Description>
+		<LangVersion>preview</LangVersion>
+		<Version>1.0.1</Version>
+		<BaseAssemblyName>Monitel.Mal.Context.CIM16.Xml.GOSTSO</BaseAssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="ГОСТ СО.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Monitel.DataContext.Tools">
+			<HintPath>\\ia-sm-sipr1\c$\Program Files\Monitel\CK-11\Client\Monitel.DataContext.Tools.dll</HintPath>
+		</Reference>
+		<Reference Include="Monitel.Mal">
+			<HintPath>\\ia-sm-sipr1\c$\Program Files\Monitel\CK-11\Client\Monitel.Mal.dll</HintPath>
+		</Reference>
+		<Reference Include="Monitel.Mal.Context.CIM16">
+		  <HintPath>\\ia-sm-sipr1\c$\Program Files\Monitel\CK-11\Client\Monitel.Mal.Context.CIM16.dll</HintPath>
+		</Reference>
+		<Reference Include="Monitel.Mal.Context.CIM16.Xml.GOST">
+			<HintPath>\\ia-sm-sipr1\c$\Program Files\Monitel\CK-11\Client\Monitel.Mal.Context.CIM16.Xml.GOST.dll</HintPath>
+		</Reference>
+		<Reference Include="Monitel.PlatformInfrastructure">
+			<HintPath>\\ia-sm-sipr1\c$\Program Files\Monitel\CK-11\Client\Monitel.PlatformInfrastructure.dll</HintPath>
+		</Reference>
+		<Reference Include="Monitel.Serialization.CIMXML">
+			<HintPath>\\ia-sm-sipr1\c$\Program Files\Monitel\CK-11\Client\Monitel.Serialization.CIMXML.dll</HintPath>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>lib\Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Windows.Forms" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Settings.Designer.cs">
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Properties\Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy &quot;$(TargetDir)Monitel.Mal.Context.CIM16.Xml.GOSTSO*.dll&quot; &quot;\\ia-sm-sipr1\c$\Program Files\Monitel\CK-11\Client&quot; /Y /R&#xD;&#xA;xcopy &quot;$(TargetDir)Monitel.Mal.Context.CIM16.Xml.GOSTSO*.pdb&quot; &quot;\\ia-sm-sipr1\c$\Program Files\Monitel\CK-11\Client&quot; /Y /R" />
+	</Target>
+
+	<PropertyGroup>
+		<Configurations>Debug;Release;ReleaseWithForm;ReleaseWithoutForm</Configurations>
+		<ApplicationIcon>ГОСТ СО.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'ReleaseWithForm'">
+		<DefineConstants>WITH_FORM</DefineConstants>
+		<AssemblyName>$(BaseAssemblyName)</AssemblyName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+		<AssemblyName>$(BaseAssemblyName) (для тестирования)</AssemblyName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'ReleaseWithoutForm'">
+		<DefineConstants>WITHOUT_FORM</DefineConstants>
+		<AssemblyName>$(BaseAssemblyName) (без формы)</AssemblyName>
+	</PropertyGroup>
+
+</Project>
